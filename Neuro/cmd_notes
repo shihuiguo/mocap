@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BVH diary
+% test.bvh ---- 3 nodes ---- no oscillator
+% test2.bvh---- 3 nodes ---- oscillator at hip
+% ****(delete already)test3.bvh---- 7 nodes ---- no oscillator
+% test3.bvh---- 14 nodes---- with oscillators
+% test4.bvh---- 18 nodes---- knees added, with oscillators, looking rigid
+% walking_1.bvh	---- 18 nodes ---- first walking clip, a dog-like character
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% delete a node
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% copy to the right position
+s.tree(2)=s.tree(5)
+
+% reset the offset, if needed
+
+% reset the id
+s.tree(2).id=2;
+
+% re-parent
+s.tree(2).parent=1
+
+% reset the childeren
+s.tree(2).children=[];
+
+% reset channel
+s.tree(2).rotInd=[9 8 7]
+
+% reset the children nodes for the root
+s.tree(1).children=[2 3];
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% add a node
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

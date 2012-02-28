@@ -1,0 +1,130 @@
+HIERARCHY
+ROOT Hips
+{
+	OFFSET 0.0000 0.0000 0.0000
+	CHANNELS 6 Xposition Yposition Zposition Zrotation Xrotation Yrotation
+	JOINT LOneHip
+	{
+		OFFSET 0.8660 0.0000 -0.5000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT LOneUpperHip
+		{
+			OFFSET 1.7320 0.3000 -1.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT LOneKnee
+			{
+				OFFSET 0.0000 -2.0000 0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT LOneFoot
+				{
+					OFFSET 0.0000 -2.0000 0.0000
+				}
+			}
+		}
+	}
+	JOINT LTwoHip
+	{
+		OFFSET 1.0000 0.0000 0.0000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT LOneUpperHip
+		{
+			OFFSET 2.0000 0.3000 0.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT LOneKnee
+			{
+				OFFSET 0.0000 -2.0000 0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT LOneFoot
+				{
+					OFFSET 0.0000 -2.0000 0.0000
+				}
+			}
+		}
+	}
+	JOINT LThreeHip
+	{
+		OFFSET 0.8660 0.0000 0.5000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT LOneUpperHip
+		{
+			OFFSET 1.7320 0.3000 1.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT LOneKnee
+			{
+				OFFSET 0.0000 -2.0000 0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT LOneFoot
+				{
+					OFFSET 0.0000 -2.0000 0.0000
+				}
+			}
+		}
+	}
+	JOINT ROneHip
+	{
+		OFFSET -0.8660 0.0000 -0.5000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT ROneUpperHip
+		{
+			OFFSET -1.7320 0.3000 -1.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT ROneKnee
+			{
+				OFFSET 0.0000 -2.0000 0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT ROneFoot
+				{
+					OFFSET 0.0000 -2.0000 0.0000
+				}
+			}
+		}
+	}
+	JOINT RTwoHip
+	{
+		OFFSET -1.0000 0.0000 0.0000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT ROneUpperHip
+		{
+			OFFSET -2.0000 0.3000 0.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT ROneKnee
+			{
+				OFFSET 0.0000 -2.0000 0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT ROneFoot
+				{
+					OFFSET 0.0000 -2.0000 0.0000
+				}
+			}
+		}
+	}
+	JOINT RThreeHip
+	{
+		OFFSET -0.8660 0.0000 0.5000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT ROneUpperHip
+		{
+			OFFSET -1.7320 0.3000 1.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT ROneKnee
+			{
+				OFFSET 0.0000 -2.0000 0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT ROneFoot
+				{
+					OFFSET 0.0000 -2.0000 0.0000
+				}
+			}
+		}
+	}
+
+	JOINT Head
+	{
+		OFFSET 0.0000 2.0000 0.0000
+	}
+}
+
+MOTION
+Frames: 317
+Frame Time: 0.008333
+0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
