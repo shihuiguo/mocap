@@ -17,7 +17,7 @@
 global rou sigma omega lambda kneeAmp kneeOff cutoff;
 
 lambda=3;
-rou=pi/8;
+rou=pi/16;
 sigma=1;
 %sigma=-1;
 omega=1.5;

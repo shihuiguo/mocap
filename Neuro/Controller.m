@@ -21,8 +21,8 @@ R(2,1)=sin(angle); R(2,2)=cos(angle);
 dy=zeros(2,1);
 
 % The q/dq, offset, amplication
-y(1)=y(1)-3;
-y(2)=(y(2)-1)*3;
+y(1)=y(1);
+y(2)=y(2)*3;
 
 temp=-lambda*((y(1)^2+y(2)^2)/rou^2-sigma);
 
