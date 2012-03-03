@@ -97,9 +97,9 @@ end
 
 numCycle=length(locs1)-1;
 
-kneeMotion=freq_tran(Y(:,1),2);
-[kneepks,kneelocs]=findpeaks(kneeMotion,'minpeakdistance',40);
-kneeUnit=kneeMotion(kneelocs(2):kneelocs(3));
+%kneeMotion=freq_tran(Y(:,1),2);
+%[kneepks,kneelocs]=findpeaks(kneeMotion,'minpeakdistance',40);
+%kneeUnit=kneeMotion(kneelocs(2):kneelocs(3));
 
 c(:,4:end)=c(:,4:end)/pi*180;
 
