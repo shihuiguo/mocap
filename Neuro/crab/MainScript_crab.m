@@ -52,13 +52,16 @@ c(:,28)=Y_out(:,1);
 c(:,55)=Y_out(:,1);
 c(:,73)=Y_out(:,1);
 
+c(:,4:end)=c(:,4:end)/pi*180;
+
+%{
 [pks1,locs1]=findpeaks(Y(:,1));
 [pks2,locs2]=findpeaks(Y_out(:,1));
 
 yin=Y(locs1(2):locs1(5),1);
 
 arrayjoints=[37 46 64 10 55 73];
-%{
+
 for i=1:3
 
 	tmp=[];
@@ -88,24 +91,24 @@ for i=4:6
 	c(:,arrayjoints(i))=tmp(1:frames);
 end
 
-%}
+
 
 if(locs1(1)>locs2(1))
 	pks2=pks2(2:end);
 	locs2=locs2(2:end);
 end
 
-numCycle=length(locs1)-1;
+%numCycle=length(locs1)-1;
 
 %kneeMotion=freq_tran(Y(:,1),2);
 %[kneepks,kneelocs]=findpeaks(kneeMotion,'minpeakdistance',40);
 %kneeUnit=kneeMotion(kneelocs(2):kneelocs(3));
 
-c(:,4:end)=c(:,4:end)/pi*180;
+
 
 for i=1:numCycle
 % Lock the Left knee, standing
-%{
+
 	c(locs1(i):locs2(i),22)=-pks1(i+1)*kneeAmp+kneeOff;
 	c(locs1(i):locs2(i),40)=-pks1(i+1)*kneeAmp+kneeOff;
 	c(locs1(i):locs2(i),58)=-pks1(i+1)*kneeAmp+kneeOff;
@@ -127,7 +130,7 @@ for i=1:numCycle
 	c(locs1(i):locs2(i),40)=-(-pks1(i+1)*kneeAmp+kneeOff);
 	c(locs1(i):locs2(i),49)=-pks1(i+1)*kneeAmp+kneeOff;
 	c(locs1(i):locs2(i),67)=-pks1(i+1)*kneeAmp+kneeOff;	
-%}	
+
 %	c(locs1(i),1:3)=c(locs1(i)-1,1:3);
 	xyz=bvh2xyz(s,c(locs1(i),:));
 	footxyz=xyz(9,:);
@@ -141,7 +144,7 @@ for i=1:numCycle
 
 %%%%%%%%%%%%%%%%%%%%%%
 % Switch leg here
-%{
+
 % Lock the Right knee, standing
 	c(locs1(i):locs2(i),13)=-pks1(i+1)*kneeAmp+kneeOff;
 	c(locs1(i):locs2(i),31)=-pks1(i+1)*kneeAmp+kneeOff;
@@ -173,7 +176,7 @@ for i=1:numCycle
 	c(locs2(i):locs1(i+1),40)=-(-kneeSwing*kneeAmp+kneeOff);
 	c(locs2(i):locs1(i+1),49)=-kneeSwing*kneeAmp+kneeOff;
 	c(locs2(i):locs1(i+1),67)=-kneeSwing*kneeAmp+kneeOff;
-%}
+
 
 %	c(locs2(i),1:3)=c(locs2(i)-1,1:3);
 	xyz=bvh2xyz(s,c(locs2(i),:));
@@ -188,11 +191,11 @@ for i=1:numCycle
 	end
 
 end
-
+%}
 
 
 
 %Fillgap_crab;
-c=c(locs1(1):locs1(end)-1,:);
+%c=c(locs1(1):locs1(end)-1,:);
 
 
