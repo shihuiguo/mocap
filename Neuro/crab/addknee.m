@@ -8,10 +8,15 @@ chout=c(locs1(2):locs1(2)+1500,:);
 knee=-abs(Y(:,1))/pi*180*x;
 [kneepks,kneelocs]=findpeaks(knee);
 
-chout(:,22)=knee(kneelocs(2):kneelocs(2)+1500,:);
-chout(:,40)=knee(kneelocs(2):kneelocs(2)+1500,:);
+chout(:,22)=knee(kneelocs(2):kneelocs(2)+1500,:)-60;
+chout(:,40)=knee(kneelocs(2):kneelocs(2)+1500,:)-60;
 
-[pks1,locs1]=findpeaks(chout(:,19));
+knee2=-abs(Y_out(:,1))/pi*180*x;
+[knee2pks,knee2locs]=findpeaks(knee2);
+chout(:,13)=knee2(knee2locs(2):knee2locs(2)+1500,:)-60;
+chout(:,31)=knee2(knee2locs(2):knee2locs(2)+1500,:)-60;
+
+%[pks1,locs1]=findpeaks(chout(:,19));
 numCycle=length(locs1)-1;
 
 for i=1:numCycle

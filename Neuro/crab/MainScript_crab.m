@@ -39,18 +39,19 @@ Y_out=phase_tran(Y,pi);
 frames=size(Y,1);
 num_ch=size(c,2);
 
+maxY=max(Y(:,1));
 
 c=zeros(frames,num_ch);
-c(:,19)=Y(:,1);
-c(:,37)=Y(:,1);
-c(:,46)=Y(:,1);
-c(:,64)=Y(:,1);
+c(:,19)=Y(:,1)+maxY/2;
+c(:,37)=Y(:,1)+maxY/2;
+c(:,46)=Y(:,1)-maxY/2;
+c(:,64)=Y(:,1)-maxY/2;
 
 
-c(:,10)=Y_out(:,1);
-c(:,28)=Y_out(:,1);
-c(:,55)=Y_out(:,1);
-c(:,73)=Y_out(:,1);
+c(:,10)=Y_out(:,1)+maxY/2;
+c(:,28)=Y_out(:,1)+maxY/2;
+c(:,55)=Y_out(:,1)-maxY/2;
+c(:,73)=Y_out(:,1)-maxY/2;
 
 c(:,4:end)=c(:,4:end)/pi*180;
 

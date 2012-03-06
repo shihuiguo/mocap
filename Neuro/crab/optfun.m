@@ -13,9 +13,9 @@ unit=Yopt(kneelocs(3):kneelocs(4),1);
 minLen=min(numFrames,length(unit));
 
 if minLen == length(unit)
-	channels(1:minLen,22)=unit/pi*180*x;
+	channels(1:minLen,22)=unit/pi*180*x-60;
 else
-	channels(:,22)=unit(1:minLen)/pi*180*x;
+	channels(:,22)=unit(1:minLen)/pi*180*x-60;
 end
 
 % channels(:,40) = channels(:,22);
