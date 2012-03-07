@@ -2,8 +2,8 @@
 
 chout=c(locs1(2):locs1(2)+1500,:);
 
-[pks1,locs1]=findpeaks(chout(:,19));
-[pks2,locs2]=findpeaks(chout(:,10));
+%[pks1,locs1]=findpeaks(chout(:,19));
+%[pks2,locs2]=findpeaks(chout(:,10));
 
 knee=-abs(Y(:,1))/pi*180*x;
 [kneepks,kneelocs]=findpeaks(knee);
@@ -16,7 +16,17 @@ knee2=-abs(Y_out(:,1))/pi*180*x;
 chout(:,13)=knee2(knee2locs(2):knee2locs(2)+1500,:)-60;
 chout(:,31)=knee2(knee2locs(2):knee2locs(2)+1500,:)-60;
 
-%[pks1,locs1]=findpeaks(chout(:,19));
+%%%%%%%% add the hind legs %%%%%%%%%%%%
+chout(:,49)=-knee(kneelocs(2):kneelocs(2)+1500,:)+60;
+chout(:,67)=-knee(kneelocs(2):kneelocs(2)+1500,:)+60;
+
+chout(:,58)=-knee2(kneelocs(2):kneelocs(2)+1500,:)+60;
+chout(:,76)=-knee2(kneelocs(2):kneelocs(2)+1500,:)+60;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[pks1,locs1]=findpeaks(chout(:,19));
+[pks2,locs2]=findpeaks(chout(:,10));
 numCycle=length(locs1)-1;
 
 for i=1:numCycle
