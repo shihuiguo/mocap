@@ -29,6 +29,10 @@ chout(:,76)=-knee2(kneelocs(2):kneelocs(2)+1500,:)+60;
 [pks2,locs2]=findpeaks(chout(:,10));
 numCycle=length(locs1)-1;
 
+if(locs1(1)>locs2(1))
+	locs1=[1 locs1(:)];
+end
+
 for i=1:numCycle
 
 	xyz=bvh2xyz(s,chout(locs1(i),:));
