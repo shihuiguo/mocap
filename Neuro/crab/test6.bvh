@@ -17,7 +17,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT LOneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
@@ -36,7 +36,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT LOneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
@@ -55,7 +55,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT LOneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
@@ -74,7 +74,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT LOneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
@@ -93,7 +93,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT ROneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
@@ -112,7 +112,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT ROneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
@@ -131,7 +131,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT LOneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
@@ -150,7 +150,7 @@ ROOT Hips
 				CHANNELS 3 Zrotation Xrotation Yrotation
 				JOINT ROneFoot
 				{
-					OFFSET 0.0000 -2.0000 0.0000
+					OFFSET 0.0000 -1.0000 0.0000
 				}
 			}
 		}
