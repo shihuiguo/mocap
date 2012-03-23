@@ -1,14 +1,29 @@
-function f=optfun(x)
+function f=optfun(x, s, cycle)
 
-global skel channels Yopt unit;
+numFrames = size(cycle, 1);
 
-% the objective function to minimize the head motion with respect to the amplitude of the knee
+rou(1, 22) = x;
+rou(1, 31) = x;
 
-numFrames=size(channels,1);
+for i = 1 : numFrames
+
+% move for one cycle, and calculate the motion of the root	
+
+end
+
+f = sum(diff(cycle(:, 2)).^2);
+
+
+%{
+ global skel channels Yopt unit;
+
+the objective function to minimize the head motion with respect to the amplitude of the knee
+
+ numFrames=size(channels,1);
 
 [kneepks,kneelocs]=findpeaks(-abs(Yopt(:,1)));
 
-unit=Yopt(kneelocs(3):kneelocs(4),1);
+% unit=Yopt(kneelocs(3):kneelocs(4),1);
 
 minLen=min(numFrames,length(unit));
 
@@ -39,3 +54,4 @@ for i=1:numFrames
 end
 
 f=sum((diff(channels(:,2))).^2+(diff(channels(:,1)).^2));
+%}

@@ -53,7 +53,7 @@ c(:,28)=Y_out(:,1)+maxY/2;
 c(:,55)=Y_out(:,1)-maxY/2;
 c(:,73)=Y_out(:,1)-maxY/2;
 
-c(:,4:end)=c(:,4:end)/pi*180;
+% c(:,4:end)=c(:,4:end)/pi*180;
 
 %{
 [pks1,locs1]=findpeaks(Y(:,1));
